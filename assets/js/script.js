@@ -83,7 +83,7 @@ document.getElementById('enviarOrcamento').addEventListener('click', function() 
     // Formata a mensagem para o WhatsApp
     const origemTexto = origem.options[origem.selectedIndex].text;
     const destinoTexto = destino.options[destino.selectedIndex].text;
-    const mensagem = `*Solicitação de Orçamento*\n\n*Nome*: ${nome.value}\n*Email*: ${email.value}\n*Telefone*: ${telefone.value}\n*Descrição*: ${descricao.value}\n*Origem*: ${origemTexto}\n*Destino*: ${destinoTexto}`;
+    const mensagem = `*Solicitação de Orçamento Carga Certa*\n\n*Nome*: ${nome.value}\n*Email*: ${email.value}\n*Telefone*: ${telefone.value}\n*Descrição*: ${descricao.value}\n*Origem*: ${origemTexto}\n*Destino*: ${destinoTexto}`;
     
     // Substitua pelo seu número de WhatsApp
     const numeroWhatsApp = '5534984096698';
