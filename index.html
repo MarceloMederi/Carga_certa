@@ -89,18 +89,22 @@
                     <div class="form-group">
                         <label for="nome">Nome:</label>
                         <input type="text" class="form-control" id="nome" placeholder="Insira o seu nome" required>
+                        <div class="error-message" id="nomeError"></div>
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
                         <input type="email" class="form-control" id="email" placeholder="Informe o seu e-mail" required>
+                        <div class="error-message" id="emailError"></div>
                     </div>
                     <div class="form-group">
                         <label for="telefone">Telefone:</label>
                         <input type="tel" class="form-control" id="telefone" placeholder="Informe o seu telefone de contato" required>
+                        <div class="error-message" id="telefoneError"></div>
                     </div>
                     <div class="form-group">
                         <label for="descricao">Descrição do Transporte:</label>
                         <textarea class="form-control" id="descricao" rows="4" required minlength="10" placeholder="Informe com detalhes o produto que quer despachar"></textarea>
+                        <div class="error-message" id="descricaoError"></div>
                     </div>
                     <div class="form-group">
                         <label for="origem">Qual Origem:</label>
@@ -114,6 +118,7 @@
                             <option value="morrinhos">Morrinhos</option>
                             <option value="uberlandia">Uberlândia</option>
                         </select>
+                        <div class="error-message" id="origemError"></div>
                     </div>
                     <div class="form-group">
                         <label for="destino">Qual Destino:</label>
@@ -127,6 +132,7 @@
                             <option value="morrinhos">Morrinhos</option>
                             <option value="uberlandia">Uberlândia</option>
                         </select>
+                        <div class="error-message" id="destinoError"></div>
                     </div>
                     <div class="text-center">
                         <button type="button" class="btn-light" id="enviarOrcamento">Solicitar Orçamento</button>
