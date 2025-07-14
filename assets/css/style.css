@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+}
+
+.hero {
+    height: 60vh; /* Altura da seção hero */
+    background-size: cover; /* Cobre toda a área */
+    display: flex; /* Flexbox para centralizar conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto */
+}
+
+.hero-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    padding: 0 15px; /* Adiciona preenchimento lateral */
+}
+
+header {
+    background-color: #007bff; /* Azul do Bootstrap */
+    padding: 20px 0;
+}
+
+header nav a {
+    margin: 0 10px;
+    color: white; /* Garante que o texto do link seja branco */
+    text-decoration: none; /* Remove sublinhado */
+}
+
+header nav a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+
+section {
+    padding: 60px 15px; /* Adiciona preenchimento lateral para seções */
+}
+
+.text-center {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente (se necessário) */
+    height: 100px; /* Ajuste a altura conforme necessário */
+}
+
+.btn-light {
+    width: 80%;
+    padding: 10px 20px; /* Adiciona preenchimento */
+    border: 1px dashed black;
+    background-color: antiquewhite;
+    color: black; /* Define a cor do texto */
+    transition: ease-in 0.5s;
+}
+
+.btn-light:hover {
+    background-color: beige;
+    color: black;
+    border: 1px dashed red;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao passar o mouse */
+}
+
+.input-error {
+    border: 2px solid red; /* Borda vermelha para campos com erro */
+    background-color: #ffe6e6; /* Fundo levemente vermelho para destaque */
+}
+
+.input-valid {
+    border: 2px solid green; /* Borda verde para campos válidos */
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0; /* Adiciona preenchimento ao rodapé */
+    text-align: center; /* Centraliza o texto do rodapé */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero {
+        height: 40vh; /* Reduz a altura da seção hero em telas menores */
+    }
+    
+    section {
+        padding: 40px 15px; /* Reduz o preenchimento das seções em telas menores */
+    }
+
+    header {
+        padding: 15px 0; /* Reduz o preenchimento do cabeçalho em telas menores */
+    }
+    
+    .btn-light {
+        width: 100%; /* Botão ocupa toda a largura em telas menores */
+    }
+}
