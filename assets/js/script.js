@@ -83,7 +83,7 @@ document.getElementById('enviarOrcamento').addEventListener('click', function() 
 
     // Adiciona a classe de carregamento ao botão
     botao.classList.add('btn-loading');
-    botao.innerHTML = 'Enviando...'; // Altera o texto do botão
+    botao.innerHTML = 'Enviando...';
 
     // Formata a mensagem para o WhatsApp
     const origemTexto = origem.options[origem.selectedIndex].text;
@@ -106,5 +106,5 @@ document.getElementById('enviarOrcamento').addEventListener('click', function() 
         // Restaura o botão após o redirecionamento
         botao.classList.remove('btn-loading');
         botao.innerHTML = 'Solicitar Orçamento';
-    }, 2000); // 2 segundos de atraso
+    }, 2000);
 });

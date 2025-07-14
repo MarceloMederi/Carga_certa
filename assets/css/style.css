@@ -1,55 +1,55 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0; /* Remove margens padrão */
-    padding: 0; /* Remove preenchimento padrão */
+    margin: 0;
+    padding: 0;
 }
 
 .hero {
-    height: 60vh; /* Altura da seção hero */
-    background-size: cover; /* Cobre toda a área */
-    display: flex; /* Flexbox para centralizar conteúdo */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    text-align: center; /* Centraliza o texto */
+    height: 60vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .hero-text {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    padding: 0 15px; /* Adiciona preenchimento lateral */
+    padding: 0 15px;
 }
 
 header {
-    background-color: #007bff; /* Azul do Bootstrap */
+    background-color: #007bff;
     padding: 20px 0;
 }
 
 header nav a {
     margin: 0 10px;
-    color: white; /* Garante que o texto do link seja branco */
-    text-decoration: none; /* Remove sublinhado */
+    color: white;
+    text-decoration: none;
 }
 
 header nav a:hover {
-    text-decoration: underline; /* Sublinha ao passar o mouse */
+    text-decoration: underline;
 }
 
 section {
-    padding: 60px 15px; /* Adiciona preenchimento lateral para seções */
+    padding: 60px 15px;
 }
 
 .text-center {
-    display: flex; /* Ativa o Flexbox */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente (se necessário) */
-    height: 100px; /* Ajuste a altura conforme necessário */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
 }
 
 .btn-light {
     width: 80%;
-    padding: 10px 20px; /* Adiciona preenchimento */
+    padding: 10px 20px;
     border: 1px dashed black;
     background-color: antiquewhite;
-    color: black; /* Define a cor do texto */
+    color: black;
     transition: ease-in 0.5s;
 }
 
@@ -57,41 +57,41 @@ section {
     background-color: beige;
     color: black;
     border: 1px dashed red;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .input-error {
-    border: 2px solid red; /* Borda vermelha para campos com erro */
-    background-color: #ffe6e6; /* Fundo levemente vermelho para destaque */
+    border: 2px solid red;
+    background-color: #ffe6e6;
 }
 
 .input-valid {
-    border: 2px solid green; /* Borda verde para campos válidos */
+    border: 2px solid green;
 }
 
 footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    padding: 20px 0; /* Adiciona preenchimento ao rodapé */
-    text-align: center; /* Centraliza o texto do rodapé */
+    padding: 20px 0;
+    text-align: center;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     .hero {
-        height: 40vh; /* Reduz a altura da seção hero em telas menores */
+        height: 40vh;
     }
     
     section {
-        padding: 40px 15px; /* Reduz o preenchimento das seções em telas menores */
+        padding: 40px 15px;
     }
 
     header {
-        padding: 15px 0; /* Reduz o preenchimento do cabeçalho em telas menores */
+        padding: 15px 0;
     }
     
     .btn-light {
-        width: 100%; /* Botão ocupa toda a largura em telas menores */
+        width: 100%;
     }
 }
