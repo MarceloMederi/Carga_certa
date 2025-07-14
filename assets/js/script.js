@@ -34,7 +34,11 @@ document.getElementById('enviarOrcamento').addEventListener('click', function() 
 
     if (!telefone.value.trim()) {
         telefone.classList.add('input-error');
-        alert("Por favor, preencha o campo Telefone.");
+        alert("É necessário informar um telefone para contato.");
+    return;
+    } else if (telefone.value.trim().length < 11) {
+        telefone.classList.add('input-error');
+        alert("O telefone deve conter no mínimo 11 dígitos.");
         return;
     } else {
         telefone.classList.add('input-valid');
