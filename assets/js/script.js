@@ -1,4 +1,6 @@
 document.getElementById('enviarOrcamento').addEventListener('click', function() {
+    const botao = this;
+    
     // Captura os dados do formulário
     const nome = document.getElementById('nome');
     const email = document.getElementById('email');
@@ -29,7 +31,6 @@ document.getElementById('enviarOrcamento').addEventListener('click', function() 
         alert("O campo de email não pode ficar vazio. Por favor, preencha.");
         return;
     } else {
-        // Validação de e-mail usando regex
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email.value.trim())) {
             email.classList.add('input-error');
@@ -43,7 +44,7 @@ document.getElementById('enviarOrcamento').addEventListener('click', function() 
     if (!telefone.value.trim()) {
         telefone.classList.add('input-error');
         alert("É necessário informar um telefone para contato.");
-    return;
+        return;
     } else if (telefone.value.trim().length < 11) {
         telefone.classList.add('input-error');
         alert("O telefone deve conter no mínimo 11 dígitos.");
@@ -80,21 +81,9 @@ document.getElementById('enviarOrcamento').addEventListener('click', function() 
         destino.classList.add('input-valid');
     }
 
-    // Validação de e-mail
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email.value.trim())) {
-        email.classList.add('input-error');
-        alert("Por favor, insira um e-mail válido.");
-        return;
-    }
-
-    // Validação de telefone (apenas números)
-    const telefonePattern = /^[0-9]+$/;
-    if (!telefonePattern.test(telefone.value.trim())) {
-        telefone.classList.add('input-error');
-        alert("Por favor, insira apenas números no campo telefone.");
-        return;
-    }
+    // Adiciona a classe de carregamento ao botão
+    botao.classList.add('btn-loading');
+    botao.innerHTML = 'Enviando...'; // Altera o texto do botão
 
     // Formata a mensagem para o WhatsApp
     const origemTexto = origem.options[origem.selectedIndex].text;
@@ -107,6 +96,15 @@ document.getElementById('enviarOrcamento').addEventListener('click', function() 
     // Cria o link para o WhatsApp
     const linkWhatsApp = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensagem)}`;
 
-    // Redireciona para o WhatsApp
-    window.open(linkWhatsApp, '_blank');
+    // Exibe a mensagem de confirmação
+    document.getElementById('mensagemConfirmacao').classList.remove('d-none');
+
+    // Redireciona para o WhatsApp após um pequeno atraso
+    setTimeout(() => {
+        window.open(linkWhatsApp, '_blank');
+
+        // Restaura o botão após o redirecionamento
+        botao.classList.remove('btn-loading');
+        botao.innerHTML = 'Solicitar Orçamento';
+    }, 2000); // 2 segundos de atraso
 });
