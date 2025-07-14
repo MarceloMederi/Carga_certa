@@ -46,7 +46,11 @@ document.getElementById('enviarOrcamento').addEventListener('click', function() 
 
     if (!descricao.value.trim()) {
         descricao.classList.add('input-error');
-        alert("Por favor, preencha o campo Descrição.");
+        alert("Por favor, preencha a descrição do transporte.");
+        return;
+    } else if (descricao.value.trim().length < 10) {
+        descricao.classList.add('input-error');
+        alert("A descrição deve conter no mínimo 10 letras.");
         return;
     } else {
         descricao.classList.add('input-valid');
