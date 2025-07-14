@@ -26,10 +26,18 @@ document.getElementById('enviarOrcamento').addEventListener('click', function() 
 
     if (!email.value.trim()) {
         email.classList.add('input-error');
-        alert("Por favor, preencha o campo Email.");
+        alert("O campo de email não pode ficar vazio. Por favor, preencha.");
         return;
     } else {
-        email.classList.add('input-valid');
+        // Validação de e-mail usando regex
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email.value.trim())) {
+            email.classList.add('input-error');
+            alert("Por favor, insira um e-mail válido.");
+            return;
+        } else {
+            email.classList.add('input-valid');
+        }
     }
 
     if (!telefone.value.trim()) {
