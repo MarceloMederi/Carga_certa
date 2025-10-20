@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             mensagemDemo.classList.remove('d-none', 'alert-success');
             mensagemDemo.classList.add('alert-info'); // Estilo de informação
-            mensagemDemo.innerHTML = '✅ **Demonstração de Contato Realizada!** <br>Se o projeto estivesse ativo, o cliente seria redirecionado para o WhatsApp com todos os dados preenchidos. Este site é um modelo para captação de clientes.';
+            mensagemDemo.innerHTML = '✅ **Demonstração de Contato Realizada!** <br>Se o projeto estivesse ativo, o cliente seria redirecionado para o WhatsApp ou e-mail com todos os dados preenchidos. Este site é um modelo.';
         }, 500); // Exibe a mensagem após 0.5s para não parecer instantâneo
 
         // 3. Restaura o botão e limpa o formulário após 2 segundos de "loading" + 8 segundos de mensagem
