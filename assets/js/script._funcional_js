@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------
-    // 1. Lógica de Validação e Simulação de Envio (Modo Demo/Marketing)
+    // 1. Lógica de Validação e Envio para WhatsApp
     // ----------------------------------------------
 
     document.getElementById('enviarOrcamento').addEventListener('click', function() {
@@ -13,8 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const descricao = document.getElementById('descricao');
         const origem = document.getElementById('origem');
         const destino = document.getElementById('destino');
-        const mensagemDemo = document.getElementById('mensagemConfirmacao');
-
 
         // Limpa mensagens de erro e classes antes da validação
         document.getElementById('nomeError').innerText = '';
@@ -30,13 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         descricao.classList.remove('input-error', 'input-valid');
         origem.classList.remove('input-error', 'input-valid');
         destino.classList.remove('input-error', 'input-valid');
-
-        // Volta a mensagem de confirmação para o estado inicial e a esconde
-        mensagemDemo.classList.add('d-none');
-        mensagemDemo.classList.remove('alert-info');
-        mensagemDemo.classList.add('alert-success');
-        mensagemDemo.innerHTML = 'Solicitação enviada com sucesso! Você será redirecionado para o WhatsApp.';
-
 
         let isFormValid = true;
 
@@ -109,35 +100,35 @@ document.addEventListener('DOMContentLoaded', () => {
         // Fim das validações
 
 
-        // --- SIMULAÇÃO DE ENVIO E MENSAGEM DE MARKETING ---
-        
-        // 1. Desativa e Simula Carregamento
+        // Adiciona a classe de carregamento e muda o texto
         botao.classList.add('btn-loading');
-        botao.innerHTML = '<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span> Processando demonstração...';
+        botao.innerHTML = '<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span> Enviando...';
 
-        // 2. Exibe a mensagem de confirmação alterada para modo DEMO
-        setTimeout(() => {
-            mensagemDemo.classList.remove('d-none', 'alert-success');
-            mensagemDemo.classList.add('alert-info'); // Estilo de informação
-            mensagemDemo.innerHTML = '✅ **Demonstração de Contato Realizada!** <br>Se o projeto estivesse ativo, o cliente seria redirecionado para o WhatsApp com todos os dados preenchidos. Este site é um modelo para captação de clientes.';
-        }, 500); // Exibe a mensagem após 0.5s para não parecer instantâneo
+        // Formata a mensagem para o WhatsApp
+        const origemTexto = origem.options[origem.selectedIndex].text;
+        const destinoTexto = destino.options[destino.selectedIndex].text;
+        const mensagem = `*Solicitação de Orçamento Carga Certa*\n\n*Nome*: ${nome.value}\n*Email*: ${email.value}\n*Telefone*: ${telefone.value}\n*Descrição*: ${descricao.value}\n*Origem*: ${origemTexto}\n*Destino*: ${destinoTexto}`;
+        
+        // Substitua pelo seu número de WhatsApp
+        const numeroWhatsApp = '5534984096698';
+        
+        // Cria o link para o WhatsApp
+        const linkWhatsApp = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensagem)}`;
 
-        // 3. Restaura o botão e limpa o formulário após 2 segundos de "loading" + 8 segundos de mensagem
+        // Exibe a mensagem de confirmação
+        document.getElementById('mensagemConfirmacao').classList.remove('d-none');
+
+        // Redireciona para o WhatsApp após um pequeno atraso (2 segundos)
         setTimeout(() => {
-            
-            // Restaura o botão
+            window.open(linkWhatsApp, '_blank');
+
+            // Restaura o botão após o redirecionamento
             botao.classList.remove('btn-loading');
             botao.innerHTML = 'Solicitar Orçamento <i class="fab fa-whatsapp ml-2"></i>';
             
-            // Esconde a mensagem de confirmação e limpa o formulário
+            // Opcional: esconder a mensagem de confirmação após um tempo
             setTimeout(() => {
-                 mensagemDemo.classList.add('d-none');
-                 
-                 // Volta para o estado inicial para futuras demonstrações
-                 mensagemDemo.classList.remove('alert-info');
-                 mensagemDemo.classList.add('alert-success'); 
-                 mensagemDemo.innerHTML = 'Solicitação enviada com sucesso! Você será redirecionado para o WhatsApp.'; 
-
+                 document.getElementById('mensagemConfirmacao').classList.add('d-none');
                  document.getElementById('orcamentoForm').reset(); // Limpa o formulário
                  
                  // Remove as classes de validação de sucesso
@@ -148,9 +139,9 @@ document.addEventListener('DOMContentLoaded', () => {
                  origem.classList.remove('input-valid');
                  destino.classList.remove('input-valid');
 
-            }, 8000); // Exibe a mensagem de demo por 8 segundos
+            }, 4000);
 
-        }, 2000); // Simula o processamento (loading) por 2 segundos
+        }, 2000);
     });
     
     // ----------------------------------------------
