@@ -10,144 +10,203 @@
     <meta name="robots" content="index, follow">
     <link rel="icon" type="image/png" href="assets/img/favicon/truck.png" alt="Ícone de caminhão">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="bg-primary text-white text-center p-4">
+    <header class="navbar navbar-expand-md navbar-dark bg-dark-blue p-3 fixed-top shadow-lg">
         <div class="container">
-            <h1 class="mb-3">Carga Certa</h1>
-            <nav class="d-inline-block">
-                <a href="#como-funciona" class="text-white mx-2">Como Funciona</a>
-                <a href="#trajeto" class="text-white mx-2">Trajeto</a>
-                <a href="#pontos" class="text-white mx-2">Cidades atendidas</a>
-                <a href="#sobre" class="text-white mx-2">Sobre Nós</a>
-                <a href="#contato" class="text-white mx-2">Contato</a>
-            </nav>
+            <a class="navbar-brand h1 mb-0 logo-text" href="#">Carga Certa <i class="fas fa-truck ml-2"></i></a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <div class="navbar-nav">
+                    <a href="#como-funciona" class="nav-link mx-2">Como Funciona</a>
+                    <a href="#trajeto" class="nav-link mx-2">Trajeto</a>
+                    <a href="#pontos" class="nav-link mx-2">Cidades</a>
+                    <a href="#sobre" class="nav-link mx-2">Sobre Nós</a>
+                    <a href="#contato" class="nav-link mx-2 btn btn-cta ml-md-3 mt-2 mt-md-0">Orçamento</a>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- Seção Hero -->
-    <section class="hero" style="background-image: url('assets/img/section/estrada.jpg');">
-        <div class="hero-text text-center text-white">
-            <h2>Transportamos suas mercadorias com segurança e eficiência</h2>
+    <section class="hero text-white" style="background-image: url('assets/img/section/estrada.jpg');">
+        <div class="hero-overlay">
+            <div class="hero-text text-center container fade-in">
+                <h2 class="display-4 font-weight-bold mb-4 animate-up">Transporte Rápido e Seguro</h2>
+                <p class="lead mb-4 animate-up delay-1">Transportamos suas mercadorias com eficiência e rastreio, onde a sua carga é a nossa prioridade.</p>
+                <a href="#contato" class="btn btn-cta btn-lg shadow animate-up delay-2">Solicite Seu Orçamento Agora! <i class="fas fa-arrow-right ml-2"></i></a>
+            </div>
         </div>
     </section>
- 
-    <!-- Main Content -->
+
     <main>
-        <!-- Como Funciona -->
-        <section id="como-funciona" class="p-5">
+        <section id="como-funciona" class="py-5 bg-light-gray animate-on-scroll">
             <div class="container">
-                <h2 class="mb-4">Como Funciona</h2>
-                <p>Solicite um orçamento e reserve seu transporte. Nós transportamos uma variedade de mercadorias, incluindo carros, motos, caixas de diversos tamanhos, materiais em geral e ferramentas. Receba suas mercadorias com segurança e confiança.</p>
-            </div>
-        </section>
-
-        <!-- Trajeto -->
-        <section id="trajeto" class="p-5 bg-light">
-            <div class="container">
-                <h2 class="mb-4">Nossos Trajetos</h2>
-                <p>Realizamos transporte de mercadorias entre as cidades de Uberlândia, Monte Alegre, Canápolis, Centralina, Goiatuba, Morrinhos e Goiânia, oferecendo segurança e eficiência em cada entrega.</p>
-                <p>Nossa frota de veículos é moderna e bem equipada para atender às necessidades específicas de cada carga, e nossos motoristas são experientes e treinados para lidar com as mercadorias com cuidado e atenção.</p>
-                <p>Confie em nós para transportar suas mercadorias com segurança e eficiência entre essas cidades. Estamos comprometidos em fornecer um serviço de alta qualidade e atender às suas necessidades de transporte de forma personalizada.</p>
-            </div>
-        </section>
-
-        <!-- Cidades atendidas -->
-        <section id="pontos" class="p-5">
-            <div class="container">
-                <h2 class="mb-4">Cidades atendidas</h2>
-                <ul>
-                    <li>Uberlândia</li>
-                    <li>Goiânia</li>
-                    <li>Monte Alegre</li>
-                    <li>Canápolis</li>
-                    <li>Centralina</li>
-                    <li>Goiatuba</li>
-                    <li>Morrinhos</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Sobre Nós -->
-        <section id="sobre" class="p-5 bg-light">
-            <div class="container">
-                <h2 class="mb-4">Sobre Nós</h2>
-                <p>Somos uma empresa dedicada ao transporte de mercadorias, oferecendo segurança e eficiência em cada entrega. Nossa equipe trabalha arduamente para garantir que suas mercadorias cheguem ao destino certo, com rapidez e confiabilidade.</p>
-            </div>
-        </section>
-
-        <!-- Contato -->
-        <section id="contato" class="p-5">
-            <div class="container">
-                <h2 class="mb-4">Contato</h2>
-                <p>Entre em contato conosco para mais informações ou para solicitar um orçamento via WhatsApp.</p>
+                <h2 class="text-center mb-5 text-dark-blue section-title">Como Funciona</h2>
+                <div class="row text-center">
+                    <div class="col-md-4 mb-4">
+                        <div class="card card-func shadow-sm h-100 p-4 animate-scale">
+                            <i class="fas fa-clipboard-list fa-3x text-cta mb-3"></i>
+                            <h5 class="card-title text-dark-blue">1. Orçamento Rápido</h5>
+                            <p class="card-text">Descreva sua mercadoria e as cidades de origem/destino no formulário abaixo.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card card-func shadow-sm h-100 p-4 animate-scale delay-1">
+                            <i class="fas fa-shipping-fast fa-3x text-cta mb-3"></i>
+                            <h5 class="card-title text-dark-blue">2. Coleta e Envio</h5>
+                            <p class="card-text">Embarque seu item. Nossa frota moderna garante o cuidado do carregamento ao descarregamento.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card card-func shadow-sm h-100 p-4 animate-scale delay-2">
+                            <i class="fas fa-box-open fa-3x text-cta mb-3"></i>
+                            <h5 class="card-title text-dark-blue">3. Entrega Garantida</h5>
+                            <p class="card-text">Receba suas mercadorias no prazo e em perfeitas condições, com rastreamento.</p>
+                        </div>
+                    </div>
+                </div>
                 
-                <form id="orcamentoForm">
-                    <div class="form-group">
-                        <label for="nome">Nome:</label>
-                        <input type="text" class="form-control" id="nome" placeholder="Insira o seu nome" required>
-                        <div class="error-message" id="nomeError"></div>
+                <div class="text-center mt-5">
+                    <p class="highlight-text p-3 shadow-sm mx-auto">
+                        <i class="fas fa-truck-loading mr-2 text-dark-blue"></i> 
+                        <strong>Transportamos:</strong> carros, motos, caixas de diversos tamanhos, materiais em geral e ferramentas.
+                    </p>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="trajeto" class="py-5 animate-on-scroll">
+            <div class="container">
+                <h2 class="mb-4 text-dark-blue section-title">Nossos Trajetos <i class="fas fa-map-marked-alt text-cta"></i></h2>
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <p class="lead">Realizamos transporte de mercadorias entre as cidades de Uberlândia, Monte Alegre, Canápolis, Centralina, Goiatuba, Morrinhos e Goiânia.</p>
+                        <p>Nossa frota de veículos é **moderna e bem equipada** para atender às necessidades específicas de cada carga. Nossos motoristas são experientes e treinados para lidar com as mercadorias com o máximo de cuidado e atenção.</p>
+                        <p class="font-weight-bold text-cta">Confie na Carga Certa para um serviço de alta qualidade e personalizado.</p>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" placeholder="Informe o seu e-mail" required>
-                        <div class="error-message" id="emailError"></div>
+                    <div class="col-lg-6 text-center">
+                        <i class="fas fa-road fa-8x text-light-gray-icon transition-ease"></i>
                     </div>
-                    <div class="form-group">
-                        <label for="telefone">Telefone:</label>
-                        <input type="tel" class="form-control" id="telefone" placeholder="Informe o seu telefone de contato" required>
-                        <div class="error-message" id="telefoneError"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pontos" class="py-5 bg-light-gray animate-on-scroll">
+            <div class="container">
+                <h2 class="text-center mb-5 text-dark-blue section-title">Cidades Atendidas <i class="fas fa-city text-cta"></i></h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <ul class="city-list list-unstyled row">
+                            <li class="col-6 col-sm-4 mb-3 list-item animate-fade-in"><i class="fas fa-check-circle text-cta mr-2"></i> Uberlândia</li>
+                            <li class="col-6 col-sm-4 mb-3 list-item animate-fade-in delay-1"><i class="fas fa-check-circle text-cta mr-2"></i> Goiânia</li>
+                            <li class="col-6 col-sm-4 mb-3 list-item animate-fade-in delay-2"><i class="fas fa-check-circle text-cta mr-2"></i> Monte Alegre</li>
+                            <li class="col-6 col-sm-4 mb-3 list-item animate-fade-in delay-3"><i class="fas fa-check-circle text-cta mr-2"></i> Canápolis</li>
+                            <li class="col-6 col-sm-4 mb-3 list-item animate-fade-in delay-4"><i class="fas fa-check-circle text-cta mr-2"></i> Centralina</li>
+                            <li class="col-6 col-sm-4 mb-3 list-item animate-fade-in delay-5"><i class="fas fa-check-circle text-cta mr-2"></i> Goiatuba</li>
+                            <li class="col-6 col-sm-4 mb-3 list-item animate-fade-in delay-6"><i class="fas fa-check-circle text-cta mr-2"></i> Morrinhos</li>
+                        </ul>
                     </div>
-                    <div class="form-group">
-                        <label for="descricao">Descrição do Transporte:</label>
-                        <textarea class="form-control" id="descricao" rows="4" required minlength="10" placeholder="Informe com detalhes o produto que quer despachar"></textarea>
-                        <div class="error-message" id="descricaoError"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-5 animate-on-scroll">
+            <div class="container">
+                <h2 class="mb-4 text-dark-blue section-title">Sobre Nós <i class="fas fa-users text-cta"></i></h2>
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                        <i class="fas fa-warehouse fa-8x text-light-gray-icon transition-ease"></i>
                     </div>
-                    <div class="form-group">
-                        <label for="origem">Qual Origem:</label>
-                        <select name="origem" id="origem" class="form-control" required>
-                            <option value="" disabled selected>Selecione a cidade de origem</option>
-                            <option value="canapolis">Canápolis</option>
-                            <option value="centralina">Centralina</option>
-                            <option value="goiania">Goiânia</option>
-                            <option value="goiatuba">Goiatuba</option>
-                            <option value="monte_alegre">Monte Alegre</option>
-                            <option value="morrinhos">Morrinhos</option>
-                            <option value="uberlandia">Uberlândia</option>
-                        </select>
-                        <div class="error-message" id="origemError"></div>
+                    <div class="col-lg-6">
+                        <p class="lead">Somos a **Carga Certa**, uma empresa dedicada a oferecer o que há de melhor em transporte de mercadorias.</p>
+                        <p>Nossa missão é garantir que cada entrega seja realizada com a máxima segurança, eficiência e confiabilidade. Trabalhamos arduamente para ser o parceiro logístico ideal para você, com foco na rapidez e na integridade de sua carga. A satisfação do cliente é a nossa rota principal!</p>
                     </div>
-                    <div class="form-group">
-                        <label for="destino">Qual Destino:</label>
-                        <select name="destino" id="destino" class="form-control" required>
-                            <option value="" disabled selected>Selecione a cidade destino</option>
-                            <option value="canapolis">Canápolis</option>
-                            <option value="centralina">Centralina</option>
-                            <option value="goiania">Goiânia</option>
-                            <option value="goiatuba">Goiatuba</option>
-                            <option value="monte_alegre">Monte Alegre</option>
-                            <option value="morrinhos">Morrinhos</option>
-                            <option value="uberlandia">Uberlândia</option>
-                        </select>
-                        <div class="error-message" id="destinoError"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-5 bg-dark-blue text-white animate-on-scroll">
+            <div class="container">
+                <h2 class="text-center mb-4 section-title-white">Solicite Seu Orçamento <i class="fas fa-shipping-fast ml-2"></i></h2>
+                <p class="text-center mb-5 lead-white">Preencha o formulário e receba sua cotação via WhatsApp em instantes!</p>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <form id="orcamentoForm" class="p-4 rounded shadow-lg bg-form-light transition-ease">
+                            <div class="form-group">
+                                <label for="nome" class="text-dark-blue">Nome:</label>
+                                <input type="text" class="form-control" id="nome" placeholder="Insira o seu nome" required>
+                                <div class="error-message" id="nomeError"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="text-dark-blue">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Informe o seu e-mail" required>
+                                <div class="error-message" id="emailError"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone" class="text-dark-blue">Telefone:</label>
+                                <input type="tel" class="form-control" id="telefone" placeholder="Informe o seu telefone de contato" required>
+                                <div class="error-message" id="telefoneError"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="descricao" class="text-dark-blue">Descrição do Transporte:</label>
+                                <textarea class="form-control" id="descricao" rows="4" required minlength="10" placeholder="Informe com detalhes o produto que quer despachar"></textarea>
+                                <div class="error-message" id="descricaoError"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="origem" class="text-dark-blue">Qual Origem:</label>
+                                <select name="origem" id="origem" class="form-control" required>
+                                    <option value="" disabled selected>Selecione a cidade de origem</option>
+                                    <option value="canapolis">Canápolis</option>
+                                    <option value="centralina">Centralina</option>
+                                    <option value="goiania">Goiânia</option>
+                                    <option value="goiatuba">Goiatuba</option>
+                                    <option value="monte_alegre">Monte Alegre</option>
+                                    <option value="morrinhos">Morrinhos</option>
+                                    <option value="uberlandia">Uberlândia</option>
+                                </select>
+                                <div class="error-message" id="origemError"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="destino" class="text-dark-blue">Qual Destino:</label>
+                                <select name="destino" id="destino" class="form-control" required>
+                                    <option value="" disabled selected>Selecione a cidade destino</option>
+                                    <option value="canapolis">Canápolis</option>
+                                    <option value="centralina">Centralina</option>
+                                    <option value="goiania">Goiânia</option>
+                                    <option value="goiatuba">Goiatuba</option>
+                                    <option value="monte_alegre">Monte Alegre</option>
+                                    <option value="morrinhos">Morrinhos</option>
+                                    <option value="uberlandia">Uberlândia</option>
+                                </select>
+                                <div class="error-message" id="destinoError"></div>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <button type="button" class="btn btn-cta btn-block btn-lg shadow-sm" id="enviarOrcamento">
+                                    Solicitar Orçamento <i class="fab fa-whatsapp ml-2"></i>
+                                </button>
+                            </div>
+                            <div id="mensagemConfirmacao" class="alert alert-success d-none mt-3" role="alert">
+                                Solicitação enviada com sucesso! Você será redirecionado para o WhatsApp.
+                            </div>
+                        </form>
                     </div>
-                    <div class="text-center">
-                        <button type="button" class="btn-light" id="enviarOrcamento">Solicitar Orçamento</button>
-                    </div>
-                    <div id="mensagemConfirmacao" class="alert alert-success d-none" role="alert">
-                        Solicitação enviada com sucesso!
-                    </div>
-                </form>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Rodapé -->
-    <footer class="bg-primary text-white text-center p-4">
-        <p>&copy; 2025 Carga Certa. Todos os direitos reservados.</p>
+    <footer class="bg-dark-blue text-white text-center p-3 mt-0">
+        <p class="mb-0">&copy; 2025 Carga Certa. Todos os direitos reservados.</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
