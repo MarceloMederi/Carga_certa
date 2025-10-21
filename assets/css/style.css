@@ -307,17 +307,26 @@ footer {
 
 
 /* Responsividade */
+/* Responsividade */
 @media (max-width: 768px) {
-    .hero {
-        padding-top: 100px; /* Mantém o padding alto para evitar corte */
-        height: 50vh;
-    }
-    
+    /* AJUSTE RECOMENDADO: Diminuir o tamanho do título principal (H2) no Hero */
     .hero-text h2 {
-        font-size: 2rem;
+        /* Garante que o título não fique gigantesco e caiba em uma ou duas linhas */
+        font-size: 2rem !important; 
+        /* Tente forçar ainda mais para evitar quebra indesejada, ou use max-width: 480px */
     }
 
-    section {
-        padding: 40px 15px !important;
+    /* AJUSTE CRUCIAL: Aumentar o padding-top da seção Hero */
+    .hero {
+        /* Aumente este valor para afastar o título do topo e da barra fixa */
+        padding-top: 100px; /* Seu valor original, vamos garantir que seja suficiente */
+        height: 60vh; /* Se 70vh for muito alto, 60vh pode melhorar a visualização do próximo bloco */
+    }
+}
+
+/* Para telas MUITO pequenas (pensando em aparelhos mais estreitos que o Honor X8b) */
+@media (max-width: 420px) {
+    .hero-text h2 {
+        font-size: 1.6rem !important; 
     }
 }

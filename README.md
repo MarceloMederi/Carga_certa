@@ -1,10 +1,4 @@
-Que ótimo que o projeto já está no Vercel e funcionando! Isso facilita muito a vida de quem for avaliar seu portfólio.
-
-Aqui está um modelo de arquivo README.md que você pode copiar, colar e ajustar no seu repositório do GitHub (ou onde estiver o código).
-
-Este README é projetado para ser profissional, destacando as suas habilidades e o valor do projeto:
-
-🚚 Landing Page de Logística: Carga Certa (Modelo de Alta Conversão)
+## 🚚 Landing Page de Logística: Carga Certa (Modelo de Alta Conversão)
 Este é um projeto de desenvolvimento Front-end para uma Landing Page fictícia focada em transporte e logística, chamado Carga Certa.
 
 Este site foi projetado para ser um modelo de alta conversão, focado em capturar leads (orçamentos) através de um formulário intuitivo. O objetivo principal deste repositório é demonstrar habilidades em design responsivo, usabilidade (UX), validação de formulário com JavaScript puro e implementação de efeitos visuais modernos.
